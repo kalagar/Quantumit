@@ -2,24 +2,22 @@
 <table mat-table [dataSource]="studentsList" class="mat-elevation-z8">
   <ng-container matColumnDef="studentName">
     <th mat-header-cell *matHeaderCellDef>Student Name</th>
-    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    <td mat-cell *matCellDef="let element">{{ element.name }}</td>
   </ng-container>
 
   <ng-container matColumnDef="studentAge">
     <th mat-header-cell *matHeaderCellDef>Age</th>
-    <td mat-cell *matCellDef="let element"> {{element.age}} </td>
+    <td mat-cell *matCellDef="let element">{{ element.age }}</td>
   </ng-container>
 
   <ng-container matColumnDef="studentGPA">
     <th mat-header-cell *matHeaderCellDef>GPA</th>
-    <td mat-cell *matCellDef="let element"> {{element.GPA}} </td>
+    <td mat-cell *matCellDef="let element">{{ element.GPA }}</td>
   </ng-container>
 
   <ng-container matColumnDef="edit">
     <th mat-header-cell *matHeaderCellDef></th>
-    <td mat-cell *matCellDef="let element">
-      <button mat-button>Edit</button>
-    </td>
+    <td mat-cell *matCellDef="let element"><button mat-button>Edit</button></td>
   </ng-container>
 
   <ng-container matColumnDef="delete">
@@ -30,5 +28,9 @@
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;" [className]="row.id === maxGPA ? 'mat-row highestGPA' : 'mat-row'"></tr>
+  <tr
+    mat-row
+    *matRowDef="let row; columns: displayedColumns"
+    [className]="row.id === maxGPA ? 'mat-row highestGPA' : 'mat-row'"
+  ></tr>
 </table>

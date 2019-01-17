@@ -18,6 +18,5 @@ export class ClassesComponent implements OnInit {
   dataSource = JSON.parse(ELEMENT_DATA);
   constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }

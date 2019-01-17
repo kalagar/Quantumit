@@ -7,7 +7,11 @@ import { ClassesComponent } from './components/classes/classes.component';
 import { StudentsComponent } from './components/students/students.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTableModule, MatButtonModule, MatDividerModule } from '@angular/material';
+import {
+  MatTableModule,
+  MatButtonModule,
+  MatDividerModule
+} from '@angular/material';
 
 @NgModule({
   declarations: [AppComponent, ClassesComponent, StudentsComponent],
@@ -22,5 +26,4 @@ import { MatTableModule, MatButtonModule, MatDividerModule } from '@angular/mate
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule {}
