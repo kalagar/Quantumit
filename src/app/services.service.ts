@@ -73,11 +73,13 @@ const SCHOOL = [
   }
 ];
 
-localStorage.setItem('SCHOOL', JSON.stringify(SCHOOL));
-
 @Injectable({
   providedIn: 'root'
 })
 export class ServicesService {
   constructor() {}
+
+  setItemsToLocalStorage() {
+    localStorage.setItem('SCHOOL', JSON.stringify(SCHOOL));
+  }
 }

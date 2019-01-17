@@ -10,6 +10,7 @@ export class StudentService {
     const classDetails = JSON.parse(localStorage.getItem('SCHOOL'));
     let studentsList = classDetails[index].students;
     studentsList = _.uniqBy(studentsList, 'name');
+    console.log('QWEQWE ===>>> ', studentsList);
     return studentsList;
   }
 }
